@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/pink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </androidx.appcompat.widget.Toolbar>
+<androidx.core.widget.NestedScrollView
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_width="0dp"
+    app:layout_constraintTop_toBottomOf="@id/toolbar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_height="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ir.android.filimo.customview.FarsiEdittext
+            android:layout_width="0dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/edt_search"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/corner_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:hint="جستجو در اسنپ فود"
+            android:layout_height="50dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_search"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:id="@+id/recycler_categories"
+
+            />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            android:layout_margin="32dp"
+            android:id="@+id/progress"
+            />
+        <ir.android.filimo.customview.FarsiTextview
+            android:id="@+id/txt_foods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="جدیدترین منوهای غذایی"
+            app:layout_constraintEnd_toEndOf="@id/edt_search"
+            app:layout_constraintTop_toBottomOf="@id/recycler_categories"
+            android:layout_margin="8dp"
+            />
+<!--        <ProgressBar-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/progress"-->
+<!--            android:layout_margin="32dp"-->
+<!--            android:id="@+id/progress2"-->
+<!--            />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_foods"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:id="@+id/recycler_foods"
+            />
+        <com.google.android.gms.ads.AdView
+
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/recycler_foods"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        </com.google.android.gms.ads.AdView>
+        <ir.android.filimo.customview.FarsiTextview
+            android:id="@+id/txt_retaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="جدیدترین رستوران ها"
+            app:layout_constraintEnd_toEndOf="@id/edt_search"
+            app:layout_constraintTop_toBottomOf="@id/adView"
+            android:layout_margin="8dp"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_retaurants"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:id="@+id/recycler_retaurants"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

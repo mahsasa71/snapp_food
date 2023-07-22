@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "378088509593",
+    "project_id": "apps-b2c3f",
+    "storage_bucket": "apps-b2c3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378088509593:android:c06d1fd14fd9f775a52808",
+        "android_client_info": {
+          "package_name": "com.example.snappfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378088509593-cqlb1tvl1boe1vjefegaq2tkne8ne0t1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNu0D1uk5ZoYqu5rRpbeTQC6n-TgpRuws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378088509593-cqlb1tvl1boe1vjefegaq2tkne8ne0t1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
